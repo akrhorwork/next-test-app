@@ -2,6 +2,7 @@ import InvoiceList from "@/components/InvoiceList";
 
 async function getData(url) {
   const req = await fetch(url, {
+    cache: "no-store",
     next: {
       revalidate: 0,
     },
